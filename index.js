@@ -4,11 +4,13 @@ const app = express();
 
 const port = 3000;
 
-app.listen(port)
+app.listen(port,()=>{
+    console.log("app is listing to ",port)
+})
 
 app.get("/", (req, res) => {
     res.send({
-        msg:"app is listinig to port 3000"
+        msg:"Welcome to app."
     })
 });
 
