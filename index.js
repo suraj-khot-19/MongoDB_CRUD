@@ -2,6 +2,7 @@ import express from 'express'
 import connectMongo from './db.js';
 import post from './routers/post_router.js'
 import welcome from './routers/welcome.js'
+ import createProduct from './routers/create.router.js'
 
 const app = express();
 
@@ -15,4 +16,5 @@ app.listen(port, () => {
 app.use(express.json()) //accept json as a body(middleware)
 app.use("/post", post)
 app.use('/', welcome)
+app.use('/api/rowdy', createProduct)
 
