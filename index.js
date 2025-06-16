@@ -5,6 +5,7 @@ import welcome from './routers/welcome.js'
 import createProduct from './routers/create.router.js'
 import allProducts from './routers/all.router.js'
 import byName from './routers/byName.router.js'
+import deleteByName from './routers/delete.router.js'
 
 const app = express();
 
@@ -21,3 +22,4 @@ app.use('/', welcome)
 app.use('/api/rowdy', createProduct)
 app.use('/api/rowdy', allProducts)
 app.use('/api/rowdy', byName)
+app.use('/api/rowdy',deleteByName)
