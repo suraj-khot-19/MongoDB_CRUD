@@ -6,10 +6,9 @@ const router = express.Router();
 router.delete('/delete/:name', async (req, res) => {
     try {
         const name = req.params.name
-        const result = await Product.deleteMany({ name }) ///focus
+        await Product.deleteOne({ name }) ///focus
         res.status(200).json({
             msg: 'Product deleted successfully!',
-            count:result.deleteCount
         })
     } catch (error) {
         res.status(500).json({
